@@ -1,0 +1,82 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        home: { bg: "#0A1411", raised: "#111F1A", line: "#22362F", text: "#EEE9DD", mute: "#8DA198", accent: "#EBA43A" },
+        orbit: { bg: "#D9D4C8", surface: "#ECE8DF", ink: "#1A1815", mute: "#6B665B", accent: "#E2541B" },
+        cyber: { bg: "#04080A", panel: "#0A1317", line: "#14323A", text: "#D3F5EE", mute: "#6E9A97", neon: "#2CF5CF", alert: "#FF3E7F" },
+        paper: { bg: "#FAF9F5", tint: "#EEF0E6", ink: "#16201C", mute: "#5E6B64", moss: "#2D5B47", butter: "#F1E4A8" },
+        sys: { bg: "#E4E4DF", panel: "#F3F3EF", ink: "#15171A", mute: "#6A6E73", line: "#CFCFC8", signal: "#E8501E", ok: "#2F8F5B", warn: "#D99A0B" },
+        sec: { bg: "#080A0D", panel: "#0E1217", line: "#1C242E", text: "#DDE3EA", mute: "#6F7C8B", crit: "#FF3B47", high: "#FF8A1F", med: "#F5D547", low: "#44D19A", info: "#4AA8FF" },
+        biz: { bg: "#F4F2EC", panel: "#FFFFFF", ink: "#1B1A16", mute: "#77746A", line: "#E2DED2", green: "#0E5A47", ochre: "#D2962B", rose: "#B8473A" },
+        glass: { sand: "#F2E6D3", coral: "#F26B4E", teal: "#0F8F86", deep: "#11332F" },
+        corp: { navy: "#11243E", navy2: "#1B3558", gold: "#B58B3C", bg: "#F6F7F9", ink: "#0F1B2D", mute: "#5B6778", line: "#DDE2EA" },
+        bold: { bone: "#ECE6D6", black: "#0E0E0E", red: "#E8321E" },
+        mauth: { orange: "#FF5B1F", cream: "#FFF2E1", ink: "#1A1411", pine: "#0F3B2E" },
+        cauth: { bg: "#F5F6F4", ink: "#1B2430", mute: "#66707C", line: "#D8DCE0", brand: "#1F4E5F" },
+        tauth: { bg: "#030805", panel: "#07120A", green: "#6BFF7A", dim: "#2E7A39", text: "#C9F7CE", err: "#FF5C5C" },
+      },
+      fontFamily: {
+        fraunces: ["var(--font-fraunces)", "serif"],
+        hanken: ["var(--font-hanken)", "system-ui", "sans-serif"],
+        syne: ["var(--font-syne)", "sans-serif"],
+        dmsans: ["var(--font-dmsans)", "system-ui", "sans-serif"],
+        chakra: ["var(--font-chakra)", "sans-serif"],
+        jbmono: ["var(--font-jbmono)", "ui-monospace", "monospace"],
+        instrument: ["var(--font-instrument)", "serif"],
+        figtree: ["var(--font-figtree)", "system-ui", "sans-serif"],
+        plexsans: ["var(--font-plexsans)", "system-ui", "sans-serif"],
+        plexmono: ["var(--font-plexmono)", "ui-monospace", "monospace"],
+        barlowc: ["var(--font-barlowc)", "sans-serif"],
+        barlow: ["var(--font-barlow)", "system-ui", "sans-serif"],
+        bricolage: ["var(--font-bricolage)", "sans-serif"],
+        publicsans: ["var(--font-publicsans)", "system-ui", "sans-serif"],
+        sora: ["var(--font-sora)", "system-ui", "sans-serif"],
+        sourceserif: ["var(--font-sourceserif)", "serif"],
+        sourcesans: ["var(--font-sourcesans)", "system-ui", "sans-serif"],
+        bigshoulders: ["var(--font-bigshoulders)", "sans-serif"],
+        archivo: ["var(--font-archivo)", "system-ui", "sans-serif"],
+        unbounded: ["var(--font-unbounded)", "sans-serif"],
+        manrope: ["var(--font-manrope)", "system-ui", "sans-serif"],
+        franklin: ["var(--font-franklin)", "system-ui", "sans-serif"],
+        spectral: ["var(--font-spectral)", "serif"],
+        firacode: ["var(--font-firacode)", "ui-monospace", "monospace"],
+      },
+      transitionTimingFunction: {
+        out: "cubic-bezier(0.22, 1, 0.36, 1)",
+      },
+      keyframes: {
+        drift: {
+          "0%, 100%": { transform: "translate3d(0,0,0) scale(1)" },
+          "50%": { transform: "translate3d(4%, -3%, 0) scale(1.12)" },
+        },
+        grain: {
+          "0%, 100%": { transform: "translate(0,0)" },
+          "20%": { transform: "translate(-3%, 2%)" },
+          "40%": { transform: "translate(2%, -3%)" },
+          "60%": { transform: "translate(-2%, -1%)" },
+          "80%": { transform: "translate(3%, 3%)" },
+        },
+        blink: { "50%": { opacity: "0" } },
+        shimmer: { "100%": { transform: "translateX(100%)" } },
+        scan: { "0%": { transform: "translateY(-10%)" }, "100%": { transform: "translateY(110%)" } },
+        marquee: { "100%": { transform: "translateX(-50%)" } },
+      },
+      animation: {
+        drift: "drift 18s ease-in-out infinite",
+        "drift-slow": "drift 26s ease-in-out infinite reverse",
+        grain: "grain 1.2s steps(5) infinite",
+        blink: "blink 1.1s steps(2) infinite",
+        shimmer: "shimmer 1.6s infinite",
+        scan: "scan 3.2s linear infinite",
+        marquee: "marquee 28s linear infinite",
+      },
+    },
+  },
+  plugins: [],
+};
+
+export default config;
